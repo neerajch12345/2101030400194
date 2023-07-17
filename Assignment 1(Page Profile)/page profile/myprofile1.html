@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+</head>
+<style>
+  *,*::before,*::after {
+  box-sizing: border-box;
+}
+body{
+	margin: 0;
+	font-family: arial;
+	background:#fff;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.6;
+	color: #333;
+	
+}
+body,html{
+	scroll-behavior: smooth;
+}
+img{ max-width: 100%; }
+a{ transition: all 0.3s ease-in-out; }
+
+.header{
+	padding: 20px 15px;
+	background: #020202;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+#Qualifications
+{
+	background-attachment:fixed;
+	background-image:url('Image/Education.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+	font-size:20px;
+	padding-bottom:30px;
+	
+}
+#QualificationsRow
+{
+     margin-top:100px;
+     margin-bottom:100px;
+}
+#QualificationsRow div.col-lg-offset-1
+{
+    padding:10px;
+    background-color:rgba(255,255,255,0.8);
+    border-radius:8px;
+    box-shadow:0px 0px 18px green;
+    
+}
+#Qualifications table
+{
+    width:100%;
+    margin-top:50px;
+}
+#Qualifications table tr td
+{
+    padding-bottom:20px;
+}
+#Qualifications table tr td:first-child
+{
+    width:30%;
+    padding-left:10px;
+}
+.logo{
+	width: 150px;
+	display: block;
+}
+.header-right-list ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+.header-right-list ul li{
+	display: inline-block;
+	margin-left: 20px;
+	vertical-align: middle;
+}
+.header-right-list ul li a{
+	font-size: 20px;
+	display:block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background:#fff;
+	color: #000;
+	border-radius: 50%;
+}
+.header-right-list ul li a:hover{
+	background:#ff2e2e;
+	color: #fff;
+}
+.header-right-list ul li a.nav_icon{
+	background: transparent;
+	color: #ff2e2e;
+	font-size: 40px;
+	vertical-align: middle;
+}
+
+.main_menu{
+	position: fixed;
+	right: 0;
+	top:0;
+	padding-top: 82px;
+	z-index: 10;
+	overflow: hidden;
+	height: 0;
+	width: 250px;
+	transition: all 0.3s ease-in-out;
+}
+.main_menu.active{
+	height: 100vh;
+}
+.main_menu ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+	z-index:-1;
+}
+
+.main_menu ul li a{
+	display: block;
+	text-decoration: none;
+	padding: 10px;
+	font-size: 25px;
+	border-bottom: 1px solid #ff2e2e;
+	color: #000;
+	background-image: linear-gradient(to right,#ff2e2e 100%,#fff);
+	background-size: 0%;
+	background-repeat: no-repeat;
+}
+.main_menu ul li a:hover{
+	background-size: 100%;
+	color: #fff;
+}
+.menu_bg{
+	background: #fff;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	top:0;
+	left: 50%;
+	margin-left: -5px;
+	transition: all 0.3s ease-in-out;
+}
+.main_menu.active .menu_bg{
+	transform: scale(120);
+}
+
+
+.banner{
+	min-height: 100vh;
+	background-size: cover;
+	background-position: center center;
+	background-color: rgba(0,0,0,0.5);
+  background-blend-mode: color;
+	color: #fff;
+	text-align: center;
+	text-shadow: 1px 1px 5px #000;
+	font-size: 26px;
+	padding-top: 85px;
+}
+.banner h1{
+	font-size: 5vw;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+
+.about_us-section{
+	padding: 100px 0;
+}
+.about_us-section figure{
+	padding: 10px;
+  border: 1px solid #ff2e2e;
+}
+h2{
+	font-size: 36px;
+	position: relative;
+	margin-bottom: 35px;
+	font-weight: 400;
+	text-align: center;
+}
+h2 span{
+	border-bottom: 2px solid #ff2e2e;
+	padding: 0 40px 5px;
+	display: inline-block;
+}
+h2.left{
+	text-align: left;
+}
+h2.left span{
+	padding-left: 0;
+}
+
+
+.services-section{
+	padding: 100px 0 40px;
+	background: #ece8e8
+}
+.service-box{
+	margin-bottom: 40px;
+	height:calc(100% - 40px);
+}
+
+.contact_us-section{
+	padding: 100px 0;
+}
+input,textarea{
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	line-height: 30px;
+	font-size: 16px;
+	border-radius: 3px;
+	border:1px solid lightgray;
+	margin-bottom: 20px;
+	resize: none;
+	background: #ece8e8;
+}
+textarea{
+	height: 150px;
+}
+input[type="submit"]{
+	width: 150px;
+	border:0px;
+	background: #ff2e2e;
+	color: #fff;
+	font-size: 18px;
+	transition: all 0.3s ease-in-out;
+	margin-bottom: 0;
+	cursor: pointer;
+}
+input[type="submit"]:hover{
+	background: #d01212;
+}
+
+
+.footer{
+	padding: 10px 30px;
+	text-align:center;
+	background:#000;
+	color:#000;
+}
+.footer-list ul li{
+	margin: 0 10px;
+}
+
+
+
+@media screen and (max-width: 767px){
+  
+	.header{
+		padding: 10px 0;
+	}
+	.logo{
+		width: 100px;
+	}
+	.header-right-list ul li{
+		margin-left: 5px;
+	}
+	.header-right-list ul li a{
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		font-size: 16px;
+	}
+	.header-right-list ul li a.nav_icon{
+		font-size: 30px;
+	}
+	.main_menu{
+		padding-top: 50px;
+	}
+	.main_menu ul li a{
+		font-size: 18px;
+	}
+	.banner{
+		font-size: 16px;
+	}
+	.banner h2{
+		font-size: 6vw;
+	}
+	.about_us-section,
+	.contact_us-section{
+		padding: 60px 0;
+	}
+	h2{ font-size: 30px; }
+	h2.left {
+    text-align: center;
+	}
+	h2.left span{
+	    padding-left: 40px;
+	}
+	.services-section{
+		padding: 60px 0 20px;
+	}
+
+	
+}
+</style>
+
+<body>
+
+<header class="header">
+		<div class="container-fluid">
+			<div class="row d-flex justify-content-between align-items-center">
+				<div class="col-auto">
+					<a href="#" class="logo"><img src="image/favicon.ico" alt=""></a>
+				</div>
+				<div class="col-auto">
+					<div class="header-right-list">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+							<li><a class="nav_icon" id="nav_icon" href="#!"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+						</ul>	
+					</div>
+					
+				</div>
+			</div>
+
+		</div>
+</header>	
+
+<div class="main_menu" id="main_menu">
+	<span class="menu_bg"></span>
+	<ul>
+		<li><a href="#home">Home</a></li>
+		<li><a href="#about">About Us</a></li>
+		<li><a href="#Qualifications">Qualification</a></li>
+		<li><a href="#contact">Contact Us</a></li>
+	</ul>
+</div>
+
+<div id="home" class="banner d-flex align-items-center" style="background-image: url('image/image1.jpg');">
+	<div class="container">
+		<h2 style="color: coral;">Neeraj Chauhan</h2>
+	</div>
+</div>
+				
+<section id="about" class="about_us-section">
+	<div class="container">
+		<h2 class="left"><span>About Us</span></h2>
+		<div class="row d-flex align-items-center">
+			<div class="col-md-6 order-md-last">
+				<figure>
+					<img src="image/Education1.jpg" alt="about pic">
+				</figure>
+			</div>
+			<div class="col-md-6" style="font-size: 20px;">
+				
+				<p>Hello! I am Neeraj Chauhan. Web Developer.
+				I’d like to focus on improving my full-stack development skills. 
+				I feel like I have a good understanding of front-end development.
+				
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="services" class="services-section">
+	<div class="container text-center">
+		<h2><span>portfolio</span></h2>
+		<div class="row">
+			<div class="col-md-4 col-sm-6 col-12">
+				<div class="service-box">
+					<figure>
+						<img src="image/project-1.jpg">
+					</figure>
+					<h3>Recent Project</h3>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-12">
+				<div class="service-box">
+					<figure>
+						<img src="image/project-2.jpg">
+					</figure>
+					<h3>Startup Project</h3>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-12">
+				<div class="service-box">
+					<figure>
+						<img src="image/project-3.jpg">
+					</figure>
+					<h3>Food Order Project</h3>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-12">
+				<div class="service-box">
+					<figure>
+						<img src="image/project-4.jpg">
+					</figure>
+					<h3>Web Advertising Project</h3>
+				</div>
+			
+		</div>
+	</div>
+</section>
+
+  <div id="Qualifications" class="container-fluid">
+	<div class="row" id="QualificationsRow">
+		 <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-6 col-md-6 col-sm-6 wow slideInLeft" data-wow-duration="3s">
+			  <br /><h2 class="text-center"><i class="fa fa-object-group"></i> Education Qualification</h2><hr />
+			  <table class="table table-responsive">
+				  <tr>
+					  <td>Year<br />Present</td>
+					  <td>B.Tech. in Information Technology<br />Silver Oak University <br /></td>
+				  </tr>
+				  <tr>
+					  <td>Year<br />2021 </td>
+					  <td>H.Sc <br />New Central Public Academic<br /> C.B.S.E. board.<br/></td>
+				  </tr>
+				  <tr>
+					  <td>Year<br />2019</td>
+					  <td>S.Sc <br/>Assumption Public school <br /> C.B.S.E. board.<br /></td>
+				  </tr>
+			  </table>
+		 </div>
+	</div>
+</div>
+
+
+<section id="contact" class="contact_us-section">
+	<div class="container">
+		<h2><span>Contact Us</span></h2>
+		<form>
+			<div class="row">
+				<div class="col-md-6">
+					<input type="text" name="" placeholder="First Name">
+				</div>
+				<div class="col-md-6">
+					<input type="text" name="" placeholder="Last Name">
+				</div>
+				<div class="col-md-6">
+					<input type="text" name="" placeholder="Email">
+				</div>
+				<div class="col-md-6">
+					<input type="text" name="" placeholder="Phone">
+				</div>
+				<div class="col-md-12 text-center">
+					<input type="submit" name="" value="Submit">
+				</div>
+			</div>
+		</form>
+	</div>
+</section>
+
+<footer class="footer">
+	<div class="header-right-list footer-list">
+		<ul>
+			<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+			<li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+			<li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+		</ul>	
+	</div>
+</footer>
+<script type="text/javascript">
+	nav_icon = document.getElementById('nav_icon');
+	main_menu = document.getElementById('main_menu');
+	menuList = document.querySelectorAll('.main_menu ul li a');
+	current = 1 
+	nav_icon.addEventListener('click',function(){
+		if(current == 1){
+			main_menu.classList.add("active");
+			current = 2
+		}else if(current == 2){
+			main_menu.classList.remove("active");
+			current = 1
+		}		
+	});
+	menuList.forEach(function(navElement) {
+		navElement.addEventListener('click',function(){
+			if(current == 2){
+				main_menu.classList.remove("active");
+				current = 1
+			}
+		});
+	});
+	
+</script>
+</body>
+</html>
